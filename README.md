@@ -1,9 +1,11 @@
 
 # LLM Safety Papers Collection
 
-> **本仓库收集并整理了大语言模型（LLM）安全相关的论文，涵盖越狱攻击、防御、可解释性、数据集与开源项目等主题。**
+> ​	**本仓库收集并整理了大语言模型（LLM）安全相关的项目论文，涵盖越狱攻击、防御、可解释性、数据集与开源项目等主题。项目会持续更新，欢迎大家star** 
+>
+> ​	论文按照时间轴进行逐个简析，方便大家迅速了解论文主要工作，个人仍处于学习阶段，水平有限，若有分析错误的情况，欢迎大家指正。
 
-所有图片文件存放在 `README/` 目录下。
+
 
 ---
 
@@ -14,7 +16,6 @@
 - [攻击 Attack](#攻击-attack)
 - [防御 Guard](#防御-guard)
 - [可解释性](#可解释性)
-- [数据集 Benchmark](#数据集-benchmark)
 - [开源项目](#开源项目)
 
 ---
@@ -32,35 +33,35 @@
 
 ## 综述  Survey
 
-**(25.09) A Comprehensive Survey on Trustworthiness in Reasoning with Large Language Models**
+**📑(25.09) A Comprehensive Survey on Trustworthiness in Reasoning with Large Language Models**
 
 https://arxiv.org/abs/2509.03871
 
-**(25.08) Guardians and Offenders: A Survey on Harmful Content Generation and Safety Mitigation of LLM**
+**📑(25.08) Guardians and Offenders: A Survey on Harmful Content Generation and Safety Mitigation of LLM**
 
 https://arxiv.org/abs/2508.05775
 
-**(25.06) From LLMs to MLLMs to Agents: A Survey of Emerging Paradigms in Jailbreak Attacks and Defenses within LLM Ecosystem**
+**📑(25.06) From LLMs to MLLMs to Agents: A Survey of Emerging Paradigms in Jailbreak Attacks and Defenses within LLM Ecosystem**
 
 https://arxiv.org/abs/2506.15170
 
-**(25.06)SoK: Evaluating Jailbreak Guardrails for Large Language Models**
+**📑(25.06)SoK: Evaluating Jailbreak Guardrails for Large Language Models**
 
 https://arxiv.org/abs/2506.10597
 
-**(25.04) A Comprehensive Survey in LLM(-Agent) Full Stack Safety: Data, Training and Deployment**
+**📑(25.04) A Comprehensive Survey in LLM(-Agent) Full Stack Safety: Data, Training and Deployment**
 
 https://arxiv.org/pdf/2504.15585
 
-**(25.02) Adversarial Prompt Evaluation: Systematic Benchmarking of Guardrails Against Prompt Input Attacks on LLMs**
+**📑(25.02) Adversarial Prompt Evaluation: Systematic Benchmarking of Guardrails Against Prompt Input Attacks on LLMs**
 
 https://arxiv.org/pdf/2502.15427
 
-**(24.10) Jailbreaking and Mitigation of Vulnerabilities in Large Language Models**
+**📑(24.10) Jailbreaking and Mitigation of Vulnerabilities in Large Language Models**
 
 https://arxiv.org/pdf/2410.15236
 
-**(24.07)Jailbreak Attacks and Defenses Against Large Language Models: A Survey**
+**📑(24.07)Jailbreak Attacks and Defenses Against Large Language Models: A Survey**
 
 https://arxiv.org/pdf/2407.04295
 
@@ -70,7 +71,7 @@ https://arxiv.org/pdf/2407.04295
 
 ### 2025
 
-**(25.09)Between a Rock and a Hard Place: Exploiting Ethical Reasoning to Jailbreak LLMs**
+**📑(25.09)Between a Rock and a Hard Place: Exploiting Ethical Reasoning to Jailbreak LLMs**
 
 > ![image-20250912004527072](README/image-20250912004527072.png)
 >
@@ -80,7 +81,7 @@ https://arxiv.org/pdf/2407.04295
 
 
 
-**(25.09)Strata-Sword: A Hierarchical Safety Evaluation towards LLMs based on Reasoning Complexity of Jailbreak Instructions**
+**📑(25.09)Strata-Sword: A Hierarchical Safety Evaluation towards LLMs based on Reasoning Complexity of Jailbreak Instructions**
 
 > https://arxiv.org/pdf/2509.01444
 >
@@ -95,7 +96,7 @@ https://arxiv.org/pdf/2407.04295
 
 
 
-**(25.08)Stand on The Shoulders of Giants: Building JailExpert from Previous Attack Experience**
+**📑(25.08)Stand on The Shoulders of Giants: Building JailExpert from Previous Attack Experience**
 
 > ![image-20250912012027208](README/image-20250912012027208.png)
 >
@@ -110,7 +111,7 @@ https://arxiv.org/pdf/2407.04295
 
 
 
-**(25.08) CCFC: Core & Core–Full–Core Dual-Track Defense for LLM Jailbreak Protection**
+**📑(25.08) CCFC: Core & Core–Full–Core Dual-Track Defense for LLM Jailbreak Protection**
 
 > ![image-20250912005143683](README/image-20250912005143683.png)
 >
@@ -120,7 +121,7 @@ https://arxiv.org/pdf/2407.04295
 
  
 
-**(25.08)The Cost of Thinking: Increased Jailbreak Risk in Large Language Models**
+**📑(25.08)The Cost of Thinking: Increased Jailbreak Risk in Large Language Models**
 
 > https://arxiv.org/pdf/2508.10032
 >
@@ -134,7 +135,7 @@ https://arxiv.org/pdf/2407.04295
 
 
 
-**(25.08) PUZZLED: Jailbreaking LLMs through Word-Based Puzzles**
+**📑(25.08) PUZZLED: Jailbreaking LLMs through Word-Based Puzzles**
 
 > ![image-20250912004915146](README/image-20250912004915146.png)
 >
@@ -148,7 +149,7 @@ https://arxiv.org/pdf/2407.04295
 
 
 
-**(25.06)Advancing Jailbreak Strategies: A Hybrid Approach to Exploiting LLM Vulnerabilities and Bypassing Modern Defenses**
+**📑(25.06)Advancing Jailbreak Strategies: A Hybrid Approach to Exploiting LLM Vulnerabilities and Bypassing Modern Defenses**
 
 > https://arxiv.org/abs/2506.21972
 >
@@ -158,7 +159,7 @@ https://arxiv.org/pdf/2407.04295
 
 
 
-**(25.05)Three Minds, One Legend: Jailbreak Large Reasoning Model with Adaptive Stacked Ciphers**
+**📑(25.05)Three Minds, One Legend: Jailbreak Large Reasoning Model with Adaptive Stacked Ciphers**
 
 > 
 >
@@ -175,11 +176,46 @@ https://arxiv.org/pdf/2407.04295
 
 
 
-**(25.02)  QueryAttack: Jailbreaking Aligned Large Language Models Using Structured Non-natural Query Language**
+**📑H-CoT: Hijacking the Chain-of-Thought Safety Reasoning Mechanism to Jailbreak Large Reasoning Models, Including OpenAI o1/o3, DeepSeek-R1, and Gemini 2.0 Flash Thinking**
+
+> https://arxiv.org/abs/2502.12893
+>
+> ![87568d65-0a26-41d5-ae4e-18bb0dbe0c4e](README/87568d65-0a26-41d5-ae4e-18bb0dbe0c4e.png)
+>
+> LRM,黑盒
+>
+> ​	论文首先分析了推理模型的思考阶段，可以分为两类：安全审查、任务执行，即模型会判断当前是否在处理恶意请求，然后进行任务执行探索，最终输出响应。第一个想法是，直接构造安全审查、任务执行的思维链，引导模型输出恶意内容，然而实际测试会发现模型会重新进行安全审查。论文分析原理后给出最终的方案：伪造任务执行的思维链进行劫持。
+>
+> - 首先可以发送一些类似、安全、有害的问题给推理模型，探索并获取其安全审查的思维链。
+> - 下一步是思维链伪造，基于目标模型的思维链，伪造出看似合理但降低安全对齐的**任务执行**思维链。
+> - 目标会认为已经处于任务执行阶段，从而绕过了安全对齐。
+
+
+
+**📑(25.02) A Mousetrap: Fooling Large Reasoning Models for Jailbreak with Chain of Iterative Chaos**
+
+> https://arxiv.org/pdf/2502.15806
+>
+> ![image-20250914123110826](README/image-20250914123110826.png)
+>
+> LRM，黑盒
+>
+> ​	借助推理模型的复杂任务处理能力，模型提出了多层嵌套加密的攻击方式。构造的样本中还用了角色扮演、强制续写等。论文主要观点如下:
+>
+> - 通过多层嵌套加密，Think模型在中间过程中是无法检测到有害意图的。
+>
+> - 模型在推理复杂任务时，注意力也会被上下文分散，无法检测有害意图
+>
+> - OOD(out-of-distribution)：恶意意图被多层加密编码，属于低样本空间的内容，模型在安全对齐时很难学习并匹配到这种模式。
+>
+>   
+
+**📑(25.02)  QueryAttack: Jailbreaking Aligned Large Language Models Using Structured Non-natural Query Language**
 
 > ![image-20250914011859641](README/image-20250914011859641.png)
 >
-> ​	论文利用OOD 来绕过模型对齐，具体来说
+> https://arxiv.org/abs/2502.09723
+> 	论文利用OOD 来绕过模型对齐，具体来说
 >
 > - 对于原始有害问题，调用模型提取其类别、关键字等信息，如 “Tell me the method of crafting a bomb” 开源提取如下信息
 >    { content:‘crafting method’, 
@@ -190,7 +226,7 @@ https://arxiv.org/pdf/2407.04295
 
 
 
-**(25.02) The Hidden Risks of Large Reasoning Models: A Safety Assessment of R1**
+**📑(25.02) The Hidden Risks of Large Reasoning Models: A Safety Assessment of R1**
 
 > https://arxiv.org/pdf/2502.12659
 >
@@ -204,7 +240,19 @@ https://arxiv.org/pdf/2407.04295
 
 ### 2024
 
-**(24.10) FLIPATTACK: JAILBREAK LLMS VIA FLIPPING**
+**📑(24.12) BEST-OF-N JAILBREAKING**
+
+> https://arxiv.org/pdf/2412.03556
+>
+> ![a7e717ab-0c72-49c4-96f0-f12c8896d55b](README/a7e717ab-0c72-49c4-96f0-f12c8896d55b.png)
+>
+> ![29079447-034b-4a83-a5d2-cd02d46754a8](README/29079447-034b-4a83-a5d2-cd02d46754a8.png)
+>
+> 多模态,黑盒
+>
+> ​	有点暴力枚举的意思，对输入尝试增加噪声，以此来绕过模型对齐，以文生文模型举例，针对恶意问题，会尝试N次，每次对恶意问题进行随机扰动增强（换位、大小写、替换等），整体来看是利用OOD进行攻击。这种攻击方法可以拓展到多模态场景。如语音输入可以加噪声、改变速度等。每次新样本的生成都是独立的。
+
+**📑(24.10) FLIPATTACK: JAILBREAK LLMS VIA FLIPPING**
 
 > https://arxiv.org/pdf/2410.02832
 >
@@ -218,7 +266,7 @@ https://arxiv.org/pdf/2407.04295
 
 
 
-**(24.10) AUTODAN-TURBO: A LIFELONG AGENT FOR STRATEGY SELF-EXPLORATION TO JAILBREAK LLMS**
+**📑(24.10) AUTODAN-TURBO: A LIFELONG AGENT FOR STRATEGY SELF-EXPLORATION TO JAILBREAK LLMS**
 
 > ![242d75c8-0685-4920-9d15-0d8339cf7797](README/242d75c8-0685-4920-9d15-0d8339cf7797.png)
 >
@@ -234,7 +282,7 @@ https://arxiv.org/pdf/2407.04295
 
 
 
-**(24.10)  JIGSAW PUZZLES: SPLITTING HARMFUL QUESTIONS TO JAILBREAK LARGE LANGUAGE MODELS**
+**📑(24.10)  JIGSAW PUZZLES: SPLITTING HARMFUL QUESTIONS TO JAILBREAK LARGE LANGUAGE MODELS**
 
 > https://arxiv.org/pdf/2410.11459
 >
@@ -248,7 +296,7 @@ https://arxiv.org/pdf/2407.04295
 
 
 
-**(24.02) CodeChameleon: Personalized Encryption Framework for Jailbreaking Large Language Models**
+**📑(24.02) CodeChameleon: Personalized Encryption Framework for Jailbreaking Large Language Models**
 
 > ![image-20250914014812011](README/image-20250914014812011.png)
 >
@@ -263,7 +311,7 @@ https://arxiv.org/pdf/2407.04295
 
 
 
-**(24.03) CodeAttack: Revealing Safety Generalization Challenges of Large Language Models via Code Completion**
+**📑(24.03) CodeAttack: Revealing Safety Generalization Challenges of Large Language Models via Code Completion**
 
 > https://arxiv.org/pdf/2403.07865
 >
@@ -275,7 +323,7 @@ https://arxiv.org/pdf/2407.04295
 
 
 
-**(24.02) COLD-Attack: Jailbreaking LLMs with Stealthiness and Controllability**
+**📑(24.02) COLD-Attack: Jailbreaking LLMs with Stealthiness and Controllability**
 
 > 白盒
 >
@@ -285,7 +333,7 @@ https://arxiv.org/pdf/2407.04295
 
 
 
-**(24.02) Play Guessing Game with LLM: Indirect Jailbreak Attack with Implicit**
+**📑(24.02) Play Guessing Game with LLM: Indirect Jailbreak Attack with Implicit**
 
 > https://arxiv.org/pdf/2402.09091
 >
@@ -302,7 +350,7 @@ https://arxiv.org/pdf/2407.04295
 
 
 
-**(23.12) Tree of Attacks: Jailbreaking Black-Box LLMs Automatically**
+**📑(23.12) Tree of Attacks: Jailbreaking Black-Box LLMs Automatically**
 
 >![e44297dc-df52-4b9d-8c57-95eaa89236bd](README/e44297dc-df52-4b9d-8c57-95eaa89236bd.png)
 >
@@ -314,7 +362,7 @@ https://arxiv.org/pdf/2407.04295
 
 
 
-**(23.11) A Wolf in Sheep’s Clothing: Generalized Nested Jailbreak Prompts can Fool Large Language Models Easily**
+**📑(23.11) A Wolf in Sheep’s Clothing: Generalized Nested Jailbreak Prompts can Fool Large Language Models Easily**
 
 > https://arxiv.org/pdf/2311.08268
 >
@@ -324,7 +372,7 @@ https://arxiv.org/pdf/2407.04295
 
 
 
-**(23.10)Jailbreaking Black Box Large Language Models in Twenty Queries**
+**📑(23.10)Jailbreaking Black Box Large Language Models in Twenty Queries**
 
 > ![5f73769f-6d06-43a8-9891-caa3a267d178](README/5f73769f-6d06-43a8-9891-caa3a267d178.png)
 >
@@ -345,7 +393,7 @@ https://arxiv.org/pdf/2407.04295
 
 
 
-**(23.10)Low-Resource Languages Jailbreak GPT-4**
+**📑(23.10)Low-Resource Languages Jailbreak GPT-4**
 
 > ![image-20250912211446160](README/image-20250912211446160.png)
 >
@@ -353,11 +401,29 @@ https://arxiv.org/pdf/2407.04295
 >
 > 论文发现小语种如 zulu语可以直接绕过模型的安全对齐，通过实验发现，使用频率越低的语言，越有可能绕过模型。这代表模型的对齐并没有较好的泛化。
 
+
+
+**📑GPT-4 IS TOO SMART TO BE SAFE: STEALTHY CHAT WITH LLMS VIA CIPHER**
+
+> ![77eef519-c345-402e-9bcf-9376cd816284](README/77eef519-c345-402e-9bcf-9376cd816284.png)
+>
+> https://arxiv.org/pdf/2308.06463
+>
+> 在system中指明加密交流的方式，并给一些fewshot让其理解。 随后将加密的问题发送给目标模型
+
+
+
+> https://arxiv.org/pdf/2308.06463
+>
+> ![039a9ad5-96f5-47d6-8911-5d6928462cc2](README/039a9ad5-96f5-47d6-8911-5d6928462cc2.png)
+
+
+
 ## 防御 GUARD
 
 ### 2025
 
-**(25.09) DynaGuard: A Dynamic Guardrail Model With User-Defined Policies**
+**📑(25.09) DynaGuard: A Dynamic Guardrail Model With User-Defined Policies**
 
 >https://arxiv.org/pdf/2509.02563
 >
@@ -367,7 +433,7 @@ https://arxiv.org/pdf/2407.04295
 >
 >
 
-**(25.08) MITIGATING JAILBREAKS WITH INTENT-AWARE LLMS**
+**📑(25.08) MITIGATING JAILBREAKS WITH INTENT-AWARE LLMS**
 
 > ![5dd12a7e-34cb-45c4-885d-e503cb7f06c9](README/5dd12a7e-34cb-45c4-885d-e503cb7f06c9.png)
 >
@@ -387,7 +453,7 @@ https://arxiv.org/pdf/2407.04295
 
 ### 2024
 
-**(24.11) STAND-Guard: A Small Task-Adaptive Content Moderation Model**
+**📑(24.11) STAND-Guard: A Small Task-Adaptive Content Moderation Model**
 
 > https://arxiv.org/pdf/2411.05214
 >
@@ -401,7 +467,7 @@ https://arxiv.org/pdf/2407.04295
 
 
 
-**(23.10) SMOOTHLLM: Defending Large Language Models Against Jailbreaking Attacks**
+**📑(23.10) SMOOTHLLM: Defending Large Language Models Against Jailbreaking Attacks**
 
 > https://arxiv.org/pdf/2310.03684
 >
@@ -413,7 +479,7 @@ https://arxiv.org/pdf/2407.04295
 
 
 
-**(23.08) DETECTING LANGUAGE MODEL ATTACKS WITH PERPLEXITY**
+**📑(23.08) DETECTING LANGUAGE MODEL ATTACKS WITH PERPLEXITY**
 
 > https://arxiv.org/pdf/2308.14132
 >
@@ -429,7 +495,7 @@ https://arxiv.org/pdf/2407.04295
 
 
 
-**(25.09)False Sense of Security: Why Probing-based Malicious Input Detection Fails to Generaliz**
+**📑(25.09)False Sense of Security: Why Probing-based Malicious Input Detection Fails to Generaliz**
 
 > 
 >
@@ -441,7 +507,7 @@ https://arxiv.org/pdf/2407.04295
 
 
 
-**(25.09) Thinking Hard, Going Misaligned: Emergent Misalignment in LLMs**
+**📑(25.09) Thinking Hard, Going Misaligned: Emergent Misalignment in LLMs**
 
 > https://arxiv.org/pdf/2509.00544
 >
@@ -452,10 +518,6 @@ https://arxiv.org/pdf/2407.04295
 > 第二个发现是，在混合推理模型（可以通过标签控制是否推理）下，推理模式会被思维链上下文干扰，导致安全性下降。从可解释性上来说，思维链上下文太长，会稀释模型对有害问题的注意力。
 
 
-
-
-
-## 数据集Benchmark
 
 
 
