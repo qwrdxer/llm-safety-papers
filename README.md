@@ -30,8 +30,11 @@
 
 ---
 
-
 ## 综述  Survey
+
+**📑Safety and Security Analysis of Large Language Models: Risk Profile and Harm Potential**
+
+https://arxiv.org/pdf/2509.10655
 
 **📑(25.09) A Comprehensive Survey on Trustworthiness in Reasoning with Large Language Models**
 
@@ -71,6 +74,41 @@ https://arxiv.org/pdf/2407.04295
 
 ### 2025
 
+**📑A Simple and Efficient Jailbreak Method Exploiting LLMs’ Helpfulness**
+
+> ![image-20250921150140748](README/image-20250921150140748.png)
+>
+> https://arxiv.org/pdf/2509.14297
+>
+> HILL (Hiding Intention by Learning from LLMs),论文的方法利用了模型的Helpfulness ,从流程图可以看到整体的设计思路。 *为了学术/好奇心/假设情况下，xx的原理是什么，具体细节是什么* 模型的有助性会促使这种越狱方法的成功。
+
+
+
+
+
+**📑(25.09)When 😊 Turns Hostile: Interpreting How Emojis Trigger LLMs’ Toxicity**
+
+> https://arxiv.org/pdf/2509.11141
+>
+> ![image-20250920172458384](README/image-20250920172458384.png)
+>
+> 通过将恶意样本中的关键词使用emoji进行相似语义替代，绕过了模型的安全机制
+>
+> - 语义替换类表情符号（如💰）常出现在非法金融活动语境中，伪装类表情符号（如🎮）多与游戏内容共现，通用毒性表情符号（如💊）则广泛关联色情、赌博等多样有毒场景。这种预训练阶段的 “数据污染” 可能增强了模型对表情符号相关毒性内容的容忍度与生成倾向
+> - 分词机制差异为表情符号提供了异质语义通道，导致其与纯文本恶意请求的内部表征脱节，降低模型安全敏感度。
+
+**📑(25.09)Mask-GCG: Are All Tokens in Adversarial Suffixes Necessary for Jailbreak Attacks? **
+
+> https://arxiv.org/pdf/2509.06350
+>
+> ![50745749-108e-48c3-904d-0ccbbbce9767](README/50745749-108e-48c3-904d-0ccbbbce9767.png)
+>
+> 白盒
+>
+> 
+
+
+
 **📑(25.09)Between a Rock and a Hard Place: Exploiting Ethical Reasoning to Jailbreak LLMs**
 
 > ![image-20250912004527072](README/image-20250912004527072.png)
@@ -92,9 +130,19 @@ https://arxiv.org/pdf/2407.04295
 >
 > 论文也描述了安全性具有scaling law 模型参数量高，安全能力强。论文发现使用英文数据集微调后的模型针对中文恶意prompt安全性会下降。论文也发现，LRM相比于LLM，更有能力去检测到恶意prompt。
 
+**📑(25,08)Multi-Turn Jailbreaks Are Simpler Than They Seem**
 
-
-
+> https://github.com/diogo-cruz/multi_turn_simpler
+>
+> ![image-20250920215811076](README/image-20250920215811076.png)
+>
+> 黑盒，多轮
+>
+> 论文实验围绕多轮越狱攻击的本质与有效性展开，核心目标包括：验证多轮攻击与单轮攻击的本质关联、探究推理能力对攻击成功率的影响、分析同家族模型的脆弱性相关性，以及评估 StrongREJECT 基准在多轮场景下的准确性。
+>
+> ![image-20250921124106176](README/image-20250921124106176.png)
+>
+> - 论文的实验结果是，多轮攻击的成功率显著高于无重试的单轮攻击，但当单轮攻击允许同等次数的重试后，二者差距消失。实验显示，多轮攻击的优势源于额外轮次提供的 “重试机会”，本质等同于多次重采样单轮攻击，而非复杂对话动态
 
 **📑(25.08)Stand on The Shoulders of Giants: Building JailExpert from Previous Attack Experience**
 
@@ -109,18 +157,6 @@ https://arxiv.org/pdf/2407.04295
 > - 从每一个类种选择中心点作为初始策略，变异样本后攻击目标模型，若攻击失败，计算相似度获取新的策略进行攻击。
 > - 成功率会作为参数持续更新。
 
-
-
-**📑(25.08) CCFC: Core & Core–Full–Core Dual-Track Defense for LLM Jailbreak Protection**
-
-> ![image-20250912005143683](README/image-20250912005143683.png)
->
-> https://arxiv.org/abs/2508.14128
->
-> 对于用户输入的恶意prompt P，首先调用语言模型提取其核心意图C 。将C 和C + P + C (三明治形式)分别调用模型，根据模型响应进行二次检查。（这样会造成数倍的延迟和资源消耗，并不适合直接应用，对于加密恶意意图的有害prompt可能效果并不好）
-
- 
-
 **📑(25.08)The Cost of Thinking: Increased Jailbreak Risk in Large Language Models**
 
 > https://arxiv.org/pdf/2508.10032
@@ -130,6 +166,20 @@ https://arxiv.org/pdf/2407.04295
 > ​	类似H-COT这种是构造思维链来绕过模型对齐，这篇是用构造思维链来加强安全对齐。
 
 
+
+**📑Involuntary Jailbreak**
+
+> https://arxiv.org/pdf/2508.13246
+>
+> 黑盒
+>
+> 让模型输出n个有害问题并回答，n个无害问题并回答。在模板中定义一些额外的逻辑函数来分散注意力。
+>
+> 摒弃传统 “预设恶意问题→诱导回答” 模式，转为 “诱导模型自主生成恶意问题 + 自主回答”，且提示本身不含明确有害内容，可规避关键词检测系统。
+>
+> 模型输出的有害问题是否可以用来后续的安全对齐？
+>
+> 代码：https://github.com/guoyang9/Involuntary-Jailbreak
 
 
 
@@ -143,11 +193,34 @@ https://arxiv.org/pdf/2407.04295
 >
 > 将带有明显恶意意图的单词转换成字谜，让模型进行复杂推理解密，从而绕过模型对齐，这种绕过思路也代表着，一些简单的对齐只能让模型在一开始输出拒绝，若增加问题复杂度，模型则会先去解密，解密出来后已经偏离了对齐。对齐若只能学到表层的模式，则存在绕过的风险。
 
+**📑(25.07)Enhancing Jailbreak Attacks on LLMs via Persona Prompts**
+
+> https://arxiv.org/pdf/2507.22171
+>
+> ![image-20250920212224439](README/image-20250920212224439.png)
+>
+> 通过遗传算法自动变异，类似角色扮演攻击，论文也发现将提示词放到system prompt攻击成功率更高
+>
+> - 初始样本来自inCharacter 数据集的 35 个小说 / 电影角色描述， 使用GPT-4o进行清洗
+> - 交叉(cross over) 随机选择成对的提示词，调用模型进行融合(论文使用5对)
+> - 变异(Mutation)：随机选择提示词进行 重写、扩写、简写变异（论文变异5个）
+> - 选择 ， 35+5+5=45,测试后剔除5个被拒绝率最高的样本，进入下一轮
+>
+> 代码位置https://github.com/CjangCjengh/Generic_Persona
 
 
 
+**📑(25.07)Response Attack: Exploiting Contextual Priming to Jailbreak Large Language Models**
 
-
+> ![7f952edf-74aa-446f-8ac7-8643b5a4c888](README/7f952edf-74aa-446f-8ac7-8643b5a4c888.png)
+>
+> 黑盒，多轮对话
+>
+> 情景启动(Contextual Priming) 是一种心理学现象，在一个经典的心理学实验中，研究者让参与者接触一系列与老年相关的词语（如“退休”、“健忘”、“灰白头发”），然后测量他们离开实验室时的步行速度。结果发现，那些接触了老年词语的参与者，离开时走得更慢。这表明，与“老年”相关的概念被启动后，无意识地影响了参与者的行为。
+>
+> 
+>
+> 
 
 **📑(25.06)Advancing Jailbreak Strategies: A Hybrid Approach to Exploiting LLM Vulnerabilities and Bypassing Modern Defenses**
 
@@ -413,15 +486,42 @@ https://arxiv.org/pdf/2407.04295
 
 
 
-> https://arxiv.org/pdf/2308.06463
->
-> ![039a9ad5-96f5-47d6-8911-5d6928462cc2](README/039a9ad5-96f5-47d6-8911-5d6928462cc2.png)
-
-
-
 ## 防御 GUARD
 
 ### 2025
+
+**📑(25.09)Improving LLM Safety and Helpfulness using SFT and DPO: A Study on OPT-350M**
+
+> https://arxiv.org/pdf/2509.09055
+>
+> 比较了SFT 、DPO 和SFT+DPO。 论文的实验结果时是 SFT+DPO > SFT > DPO ,论文使用的数据集为HH-RLHF
+>
+> 
+
+**📑(25.09)Reasoned Safety Alignment: Ensuring Jailbreak Defense via Answer-Then-Check**
+
+> ![image-20250920155217717](README/image-20250920155217717.png)
+>
+> 
+>
+> ![image-20250920160520232](README/image-20250920160520232.png)
+>
+> https://arxiv.org/abs/2509.11629
+>
+> 构建了一个安全推理数据集，在<safety_check>中的信息不会展示给用户，首先会对用户输入做意图识别、摘要，随后做安全检查。相当于通过微调让模型首先做意图识别、随后给出响应。
+
+
+
+**📑Beyond Surface Alignment: Rebuilding LLMs Safety Mechanism via Probabilistically Ablating Refusal Direction**
+
+> ![image-20250920123354285](README/image-20250920123354285.png)
+>
+> https://arxiv.org/abs/2509.15202
+>
+> - 方向向量选择。首先会使用有害训练集和无害训练集进行方向确定，对于L层，生成的前I个 Token进行计算。生成L * I 个候选方向向量，然后在测试集上评估所有候选方向，最终确定一个向量作为方向向量。这个方向向量满足 “加法约束”（添加后诱导拒绝）与 “消融约束”（移除后绕过拒绝）。
+> - 训练时，随机选择模型的部分层、部分 token 位置，移除隐藏状态中拒绝方向的投影分量，以此模拟 “多维度内部安全机制受损” 的越狱状态。通过有害、无害、有害前缀 的样本进行训练，使其学会拒绝的本质逻辑
+
+
 
 **📑(25.09) DynaGuard: A Dynamic Guardrail Model With User-Defined Policies**
 
@@ -432,6 +532,16 @@ https://arxiv.org/pdf/2407.04295
 >![43ead334-2dd1-4d51-916b-8c8d31c9cfb5](README/43ead334-2dd1-4d51-916b-8c8d31c9cfb5.png)
 >
 >
+
+**📑(25.08) CCFC: Core & Core–Full–Core Dual-Track Defense for LLM Jailbreak Protection**
+
+> ![image-20250912005143683](README/image-20250912005143683.png)
+>
+> https://arxiv.org/abs/2508.14128
+>
+> 对于用户输入的恶意prompt P，首先调用语言模型提取其核心意图C 。将C 和C + P + C (三明治形式)分别调用模型，根据模型响应进行二次检查。（这样会造成数倍的延迟和资源消耗，并不适合直接应用，对于加密恶意意图的有害prompt可能效果并不好）
+
+ 
 
 **📑(25.08) MITIGATING JAILBREAKS WITH INTENT-AWARE LLMS**
 
@@ -448,6 +558,34 @@ https://arxiv.org/pdf/2407.04295
 > - 在推理时，<intent>会增加到prompt后面，让模型先做意图识别，然后响应
 >
 >   相比于其他方案，论文的过渡拒绝率也很低。论文也对比了微调前后模型性能方面的影响，结果是并没有掉分太多，有的甚至还增加了(个人感觉<intent>标签作用有点类似<Think>，推理能力稍微增加了)
+
+**📑LoRA is All You Need for Safety Alignment of Reasoning LLMs**
+
+> https://arxiv.org/pdf/2507.17075
+>
+> ![image-20250920152432565](README/image-20250920152432565.png)
+>
+> 全参数的模型对齐训练会导致对齐税。从可解释性上来说，部份的神经元是安全相关的，大部分还是与知识能力相关，全参更新会导致能力的下降。
+>
+> - 通过对齐数据集作LORA 微调，在提高安全性的同时，模型通用能力并不会受到太大影响
+> - 微调MLP 或者微调 QKVO + MLP 性能相似
+
+
+
+
+
+**📑(25.05)Safety Alignment Can Be Not Superficial With Explicit Safety Signals**
+
+![096f9348-8ef6-49e4-aea1-9440b6cb4bb3](README/096f9348-8ef6-49e4-aea1-9440b6cb4bb3.png)
+
+> https://arxiv.org/pdf/2505.17072
+>
+> 论文的核心思想是，在整个模型输入的最前面，加上一个[CLS] Token （增加一个额外的二分类器用于判定），在预训练、SFT时，同时进行Next Token predict训练和二分类训练。
+>
+> - CLS Token 参考了Bert模型，通过稍微修改mask，它会动态的基于后面的Token进行更新。
+> - 推理阶段时，CLS会首选关注输入的Query，随后持续更新，以此来检测模型输出是否有恶意。
+
+
 
 
 
@@ -528,6 +666,10 @@ https://arxiv.org/pdf/2407.04295
 > https://github.com/yueliu1999/Awesome-Jailbreak-on-LLMs
 > https://github.com/ThuCCSLab/Awesome-LM-SSP
 > https://github.com/ydyjya/Awesome-LLM-Safety
+>
+> https://github.com/wonderNefelibata/Awesome-LRM-Safety
+>
+> 
 
 
 
