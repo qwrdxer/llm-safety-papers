@@ -74,7 +74,7 @@ https://arxiv.org/pdf/2407.04295
 
 ### 2025
 
-**📑A Simple and Efficient Jailbreak Method Exploiting LLMs’ Helpfulness**
+**📑(25.09)A Simple and Efficient Jailbreak Method Exploiting LLMs’ Helpfulness**
 
 > ![image-20250921150140748](README/image-20250921150140748.png)
 >
@@ -367,6 +367,17 @@ https://arxiv.org/pdf/2407.04295
 >
 > Query处理完成后，通过多轮对话的形式，逐词句发送给目标模型，并最后让目标模型重构出query来绕过模型对齐。
 
+**📑(24.08) EnJa: Ensemble Jailbreak on Large Language Models**
+
+> ![image-20251010223346639](README/image-20251010223346639.png)
+>
+> 论文结合了prompt-level 的越狱方法与token-level的越狱方法，提高了越狱攻击的成功率和攻击速度。 
+>
+> 1. 首先使用prompt-level方法对原始有害问题进行隐藏，然后调用模型生成一个相应的开头。
+> 2. 接着是GCG攻击进行后缀优化。
+
+
+
 
 
 **📑(24.02) CodeChameleon: Personalized Encryption Framework for Jailbreaking Large Language Models**
@@ -462,6 +473,12 @@ https://arxiv.org/pdf/2407.04295
 > 3. Judge 模型给出评分S
 > 4. 若S=0 代表越狱没有成功，将(P,R,S) 返送给Attack，让Attack迭代出新的prompt进行下一轮攻击
 
+**📑(23.10)Jailbreak and Guard Aligned Language Models with Only Few In-Context Demonstrations**
+
+> ![image-20251010221158708](README/image-20251010221158708.png)
+>
+> 思路是利用上下文填入历史对话消息，当模型看到之前对有害问题进行过回复则对当前有害问题更有可能进行回答。防御也是类似的思路。需要注意的是这种方法需要能操控模型的Assistant侧的消息。如果在User中田中历史对话攻击成功率肯定会下降的。
+
 
 
 
@@ -476,7 +493,7 @@ https://arxiv.org/pdf/2407.04295
 
 
 
-**📑GPT-4 IS TOO SMART TO BE SAFE: STEALTHY CHAT WITH LLMS VIA CIPHER**
+**📑(23.08)GPT-4 IS TOO SMART TO BE SAFE: STEALTHY CHAT WITH LLMS VIA CIPHER**
 
 > ![77eef519-c345-402e-9bcf-9376cd816284](README/77eef519-c345-402e-9bcf-9376cd816284.png)
 >
